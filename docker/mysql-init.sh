@@ -15,7 +15,7 @@ case "${MYSQL_APP_USER:-}" in
   ''|*[!A-Za-z0-9_]*) fail 'MYSQL_APP_USER must use only letters, numbers, and underscores' ;;
 esac
 
-# The documented generator creates base64url output. Restricting this secret
+# The documented generator creates base64url output. Restricting this secret.
 # makes its safe use in the one-time SQL statement explicit and avoids shell or
 # SQL quoting surprises. Root credentials are never printed.
 case "${MYSQL_APP_PASSWORD:-}" in
